@@ -11,7 +11,9 @@ O `index.html` é a aplicação. O GitHub Pages pode publicá-lo diretamente a p
 1. A primeira pessoa cria uma conta no app e confirma o e-mail.
 2. No primeiro acesso, o app cria o orçamento familiar compartilhado.
 3. Em **Configurações**, copie o código de convite.
-4. A segunda pessoa cria sua própria conta e informa o código durante o cadastro.
+4. A segunda pessoa cria sua própria conta e informa o código durante o cadastro. Se já estiver logada, pode colar o código em **Configurações → Orçamento compartilhado**.
+
+Se a segunda conta já estiver ligada a um orçamento individual, execute uma vez o arquivo `migracao-orcamento-compartilhado.sql` no SQL Editor do Supabase para habilitar a troca para o orçamento compartilhado.
 
 O app usa a chave publicável do Supabase no navegador. Os dados financeiros ficam no banco e o acesso é controlado pelas políticas RLS para membros do orçamento. Nunca inclua uma chave `service_role` neste app.
 
